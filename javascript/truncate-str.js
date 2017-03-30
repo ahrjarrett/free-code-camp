@@ -4,6 +4,8 @@ const truncateStr = (str, num) => {
   const arr = str.split('').slice(0, num).reverse()
   let newArr = arr
 
+  if(num >= str.length) return str
+
   if(num <= 3) {
     return newArr.reverse().join('').concat('...')
   }
@@ -16,8 +18,13 @@ const truncateStr = (str, num) => {
   }
 }
 
+const test = "A-tistket a-tasket a green and yellow basket"
 
 console.log(
-  truncateStr("A-tistket a-tasket A green and yellow basket", 11))
+  truncateStr(test, 11))
 console.log(
-  truncateStr("A-tistket a-tasket A green and yellow basket", 3))
+  truncateStr(test, 3))
+console.log(
+  truncateStr(test, test.length))
+console.log(
+  truncateStr(test, test.length + 2))
