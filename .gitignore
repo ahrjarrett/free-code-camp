@@ -1,2 +1,4 @@
 .DS_Store
 *.swp
+
+projects/random-quote-tweet/node_modules
