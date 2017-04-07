@@ -1,11 +1,9 @@
 var express = require('express')
 var router = express.Router()
 
-var quotes = [
-  {author: 'Ben Franklin', quote: 'A penny saved'},
-  {author: 'Andrew Jarrett', quote: 'Two penny saved'},
-  {author: 'Brit Morrison', quote: 'Three penny saved'}
-]
+var quotes = [{author: 'Ben Franklin', quote: 'A penny saved'},
+{author: 'Andrew Jarrett', quote: 'Two penny saved'},
+{author: 'Brit Morrison', quote: 'Three penny saved'}]
 
 router.get('/', function(req, res, next) {
   res.render('index', {
@@ -14,6 +12,7 @@ router.get('/', function(req, res, next) {
   })
 })
 
+// NOT WORKING
 router.get('/test', function(req, res, next) {
   res.send(quotes)
 })
