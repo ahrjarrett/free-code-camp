@@ -1,17 +1,17 @@
-// 04-04-17: BROKEN!
-// https://www.freecodecamp.com/challenges/caesars-cipher
-// Need to figure out how to make the cipher
-// loop back after charcode goes beyond Z
+// 04-06-17: FIXED
+// ~~04-04-17: BROKEN!~~
 
-const rot13 = (str) => {
-  const arrayed = str.split('')
-  const mapped = arrayed.map(letter => {
-    const charCode = letter.charCodeAt()
-    return charCode
-    //return String.fromCharCode(charCode)
-  })
+const rot13 = (str) => str
+  .split('')
+  .map(cipher)
+  .join('')
 
-  return mapped
+const cipher = (letter) => {
+  const regex = /[^a-zA-Z]/g
+  const ascii = letter.charCodeAt(0)
+  if(regex.test(letter)) return letter
+  if(ascii > 77) return String.fromCharCode(ascii - 13)
+  return String.fromCharCode(ascii + 13)
 }
 
 console.log(rot13("SERR PBQR PNZC")) // => "FREE CODE CAMP"
