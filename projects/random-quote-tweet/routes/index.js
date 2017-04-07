@@ -9,8 +9,12 @@ router.get('/', function(req, res, next) {
       {author: 'Andrew Jarrett', quote: 'Two penny saved'},
       {author: 'Brit Morrison', quote: 'Three penny saved'}
     ]
-
   })
+})
+
+// NOT WORKING
+router.get('/test', function(req, res, next) {
+  res.JSON({"does this work?": "testing"})
 })
 
 module.exports = router

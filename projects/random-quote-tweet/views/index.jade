@@ -4,5 +4,7 @@ block content
   h1#title= title
   p#subtitle Build a Random Quote Machine
   button#get-quote New Quote
-  p#quote= quotes[0].quote
+  p#quote-body= quotes[0].quote
   p#quote-author= quotes[0].author
+  script(src='javascripts/lib/jquery.js')
+  script(src='javascripts/main.js')
