@@ -3,6 +3,7 @@
 var new_quote = document.getElementById('get-quote')
 var quote_body = document.getElementById('quote-body')
 var quote_author = document.getElementById('quote-author')
+var tweet = document.getElementById('twitter-share-button')
 
 // AJAX
 new_quote.addEventListener('click', function(e) {
@@ -12,10 +13,26 @@ new_quote.addEventListener('click', function(e) {
     url: `https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=`,
     cache: false
   })
+
   request.success(function(data) {
     var quote = data.shift()
-    quote_body.innerHTML = quote.content
-    quote_author.innerHTML = quote.title
+    var content = quote.content
+    var title = quote.title
+    quote_body.innerHTML = content
+    quote_author.innerHTML = title
+
+
+    var trimmed_quote = content
+          .slice(3, content.length - 5)
+          .trim()
+          .split(' ')
+          .join('%20')
+
+
+
+
+    console.log(trimmed_quote)
+    //tweet.setAttribute('href', '
   })
 
 })
