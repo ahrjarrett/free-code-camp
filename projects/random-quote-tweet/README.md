@@ -1,6 +1,6 @@
-# Random Quote Machine
+[Original Challenge](https://www.freecodecamp.com/challenges/build-a-random-quote-machine)
 
-(Original Challenge)[https://www.freecodecamp.com/challenges/build-a-random-quote-machine]
+# Random Quote Machine
 
 1. Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/FreeCodeCamp/full/ONjoLe/.
 2. Fulfill the below user stories. Use whichever libraries or APIs you need. Give it your own personal style.
