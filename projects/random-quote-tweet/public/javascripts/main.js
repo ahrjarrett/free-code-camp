@@ -18,21 +18,18 @@ new_quote.addEventListener('click', function(e) {
     var quote = data.shift()
     var content = quote.content
     var title = quote.title
-    quote_body.innerHTML = content
-    quote_author.innerHTML = title
-
 
     var trimmed_quote = content
           .slice(3, content.length - 5)
           .trim()
-          .split(' ')
-          .join('%20')
+          //.split(' ')
+          //.join('%20')
 
-
-
+    quote_body.innerHTML = content
+    quote_author.innerHTML = title
 
     console.log(trimmed_quote)
-    //tweet.setAttribute('href', '
+    tweet.setAttribute('href', 'https://twitter.com/intent/tweet?text=' + trimmed_quote)
   })
 
 })
