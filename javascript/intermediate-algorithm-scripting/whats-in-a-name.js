@@ -3,12 +3,45 @@ const R = require('ramda')
 //  Object.keys()
 
 
-const whatsInAName = (coll, query) => {
+function whatsinAName(collection, source) {
+  var srcKeys = Object.keys(source);
 
-  return coll.map(person => {
-    return Object.keys(person)
-  }
+  return collection.filter(function (obj) {
+    for(var i = 0; i < srcKeys.length; i++) {
+      if(!obj.hasOwnProperty(srcKeys[i]) || obj[srcKeys[i]] !== source[srcKeys[i]]) {
+        return false;
+      }
+    }
+    return true;
+  });
 }
+
+const whatsInAName = (coll, query) => {
+  let query_keys = Object.keys(query)
+
+  return coll.filter(person => {
+    for(var i = 0; i < query_keys.length; i++) {
+      if(!person.hasOwnProperty(query_keys[i]) || person[query_keys[i]] !== query[query_keys[i]]) {
+        return false
+      }
+    }
+    return true
+  })
+}
+
+
+//const whatsInAName = (coll, query) => {
+//  let query_keys = Object.keys(query)
+//
+//  return coll.filter(function(person) {
+//    for(let i = 0; i < query_keys.length; i++) {
+//      if(!coll.hasOwnProperty(query_keys[i]) || coll[query_keys[i]] !== query[query_keys[i]] ) {
+//        return false
+//      }
+//    }
+//    return true
+//  })
+//}
 
 
 
