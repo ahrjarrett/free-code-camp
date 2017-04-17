@@ -1,6 +1,6 @@
 const sumAll = (arr) => {
   let sorted = arr.sort(function(a, b) {
-    return a - b;
+    return a - b
   })
   let range = []
 
