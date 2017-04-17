@@ -4,12 +4,10 @@ const R = require('ramda')
 
 
 const whatsInAName = (coll, query) => {
-  return coll.map(person => {
-    if(person.hasOwnProperty(query)) {
-      return query
 
-    }
-  })
+  return coll.map(person => {
+    return Object.keys(person)
+  }
 }
 
 
