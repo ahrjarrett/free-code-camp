@@ -1,0 +1,23 @@
+{
+  "name": "free-code-camp",
+  "version": "1.0.0",
+  "description": "Projects and Solutions to Free Code Camp Exercises, with the answers rewritten using things arrow functions and rest parameters.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahrjarrett/free-code-camp.git"
+  },
+  "keywords": [],
+  "author": "Andrew Jarrett <ahrjarrett@gmail.com> (https://github.com/ahrjarrett)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahrjarrett/free-code-camp/issues"
+  },
+  "homepage": "https://github.com/ahrjarrett/free-code-camp#readme",
+  "devDependencies": {
+    "ramda": "0.23.0"
+  }
+}
