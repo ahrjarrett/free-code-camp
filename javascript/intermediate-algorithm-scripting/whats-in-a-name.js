@@ -52,5 +52,9 @@ console.log(
      { last: "Capulet" }))
 //  [{ first: "Tybalt", last: "Capulet" }]
 
+console.log(whatsInAName([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 }))
+// [{ "a": 1, "b": 2 }, { "a": 1, "b": 2, "c": 2 }]
+
+
 module.exports = whatsInAName
 
