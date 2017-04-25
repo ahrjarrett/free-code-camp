@@ -1,5 +1,11 @@
 [Hosted on Heroku](https://ahrjarrett-random.herokuapp.com/)
 
+Just run:
+`npm i`
+`npm start`
+
+And get your quote(s).
+
 [Original Challenge](https://www.freecodecamp.com/challenges/build-a-random-quote-machine)
 
 # Random Quote Machine
