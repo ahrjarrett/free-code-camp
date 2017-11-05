@@ -1,14 +1,14 @@
 var Person = function(firstAndLast) {
-    var name = firstAndLast.split(' ')
-    this.getFirstName = function() { return name[0] }
-    this.getLastName = function() { return name[1] }
-    this.getFullName = function() { return `${name[0]} ${name[1]}` }
-    this.setFirstName = function(n) { name[0] = n }
-    this.setLastName = function(n) { name[1] = n }
-    this.setFullName = function(n) {
-      name[0] = n.split(' ')[0]
-      name[1] = n.split(' ')[1]
-    }
+  var name = firstAndLast.split(' ')
+  this.getFirstName = function() { return name[0] }
+  this.getLastName = function() { return name[1] }
+  this.getFullName = function() { return `${name[0]} ${name[1]}` }
+  this.setFirstName = function(n) { name[0] = n }
+  this.setLastName = function(n) { name[1] = n }
+  this.setFullName = function(n) {
+    name[0] = n.split(' ')[0]
+    name[1] = n.split(' ')[1]
+  }
 }
 
 var bob = new Person('Bob Ross')
