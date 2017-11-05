@@ -11,6 +11,13 @@ $ cd client
 $ yarn start
 ```
 
+In a separate terminal window, kick off the server:
+
+```
+$ cd server
+$ yarn start
+```
+
 [Original Assignment & User Story Requirements](https://www.freecodecamp.org/challenges/show-the-local-weather)
 
 
