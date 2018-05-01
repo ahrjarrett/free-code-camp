@@ -2,18 +2,20 @@
 // See: https://forum.freecodecamp.org/t/freecodecamp-algorithm-challenge-guide-smallest-common-multiple/16075
 
 
-function smallestCommonMultiple(arr) {
-  arr.sort((a, b) => b - a)
-
-  let newArr = []
-
-  for(let i = arr[0]; i >= arr[1]; i--) {
-    newArr.push(i)
+const smallestCommons = arr => {
+  const range = []
+  const sortedArr = arr.sort((a, b) => a - b)
+  let i = sortedArr[0]
+  let wall = sortedArr[1]
+  while(i <= wall) {
+    range.push(i)
+    i++
   }
 
+  let mult = 1
 
-  return newArr
+  return range
 }
 
-console.log(smallestCommonMultiple([6, 12])) // => 12
-
+console.log(smallestCommons([1,5])) // => 60
+console.log(smallestCommons([5,1])) // => 60
